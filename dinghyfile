@@ -1,0 +1,16 @@
+{
+  "application": "{{ var "app" }}",
+  "globals": {
+    "app": "malty-pipeline"
+  },
+  "pipelines": [
+    {
+      "application": "{{ var "app" }}",
+      "description": "foo",
+      "name": "malty-pipeline",
+      "stages": [
+        {{ module "wait.stage" }}
+      ]
+    }
+  ]
+}
